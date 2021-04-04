@@ -7,8 +7,9 @@ export const HeaderContainer = styled.header`
   height: auto;
   padding: 2rem;
   border-radius: 1rem;
+  flex-direction: column;
 
-  width: 75%;
+  min-width: 75%;
 
   /* glassmorphism */
   /* background: rgba(255, 255, 255, 0.7); */
@@ -21,6 +22,11 @@ export const HeaderContainer = styled.header`
   box-shadow: 0px calc(var(--size) / 6) calc(var(--size) / 3) rgba(black, 0.1);
   color: white;
   font-weight: 400;
+  margin-bottom: 2rem;
+
+  p {
+    margin: 0;
+  }
 `;
 
 export const Title = styled.h1`
