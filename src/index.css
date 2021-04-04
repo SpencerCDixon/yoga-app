@@ -1,13 +1,91 @@
+:root {
+  --foreground-color: white;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  background: linear-gradient(
+      322deg,
+      rgba(186, 74, 255),
+      rgba(186, 74, 255, 0) 70%
+    ),
+    linear-gradient(178deg, rgba(0, 138, 255), rgba(0, 138, 255, 0) 70%),
+    linear-gradient(24deg, rgba(0, 255, 198), rgba(0, 255, 198, 0) 35%);
+
+  /* background: linear-gradient(322deg, rgba(186 74 255), rgba(186 74 255 0) 70%),
+    linear-gradient(178deg, rgba(0 138 255), rgba(0 138 255 0) 70%),
+    linear-gradient(24deg, rgba(0, 255, 198), rgba(0 255 198 0) 35%); */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+p,
+a {
+  font-size: 1rem;
+}
+
+a {
+  color: #4d4ae8;
+  text-decoration: none;
+}
+
+.shape {
+  position: absolute;
+  width: 150px;
+  top: 3rem;
+  left: 10rem;
+}
+
+#gradient-vertical {
+  --color-stop-2: #ffffff;
+  --color-stop-3: #f8edeb;
+}
+
+.icon-gradient-override {
+  /* This works, as shown before */
+  fill: url(#gradient-horizontal) gray;
+}
+
+.cloud1 {
+  position: absolute;
+  font-size: 500px;
+
+  /* top: 3rem; */
+  bottom: -5rem;
+  left: 10%;
+  /* left: 10rem; */
+
+  /* color: url(#gradient-vertical) #fdb99b; */
+  color: #f8edeb;
+  /* fill: #cf8bf3; */
+}
+.cloud2 {
+  position: absolute;
+  font-size: 400px;
+  color: #f8edeb;
+  /* top: 3rem; */
+  bottom: 30%;
+  right: -1.5rem;
+}
+
+.cloud3 {
+  position: absolute;
+  font-size: 200px;
+  color: #f8edeb;
+  /* top: 3rem; */
+  top: 0;
+  left: 2rem;
 }
