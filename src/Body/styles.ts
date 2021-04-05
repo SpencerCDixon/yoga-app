@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// import { Link as ReactLink } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -16,9 +17,6 @@ export const Container = styled.div`
 //   margin: 1rem;
 
 //   /* glassmorphism */
-//   /* background: rgba(255, 255, 255, 0.7); */
-//   -webkit-backdrop-filter: blur(20px);
-//   backdrop-filter: blur(10px);
 
 //   /* border: 1px solid white; */
 //   background-color: rgba(255, 255, 255, 0.1);
@@ -74,6 +72,7 @@ export const Wrapper = styled.div`
   }
 `;
 
+// export const Box = styled(ReactLink)`
 export const Box = styled.div`
   display: flex;
   flex-direction: column;

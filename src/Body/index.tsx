@@ -1,14 +1,7 @@
 import { FC, SVGAttributes } from "react";
 // import "./App.css";
-import {
-  Container,
-  // Card,
-  // CardTitle,
-  // LinkButton,
-  Box,
-  Ruler,
-  Wrapper,
-} from "./styles";
+import { Link } from "react-router-dom";
+import { Container, Box, Ruler, Wrapper } from "./styles";
 import { Activity, Sun, Moon, Zap } from "react-feather";
 
 type Yoga = {
@@ -47,45 +40,15 @@ const Body: FC = () => {
       <Wrapper>
         {yogaTypes.map(({ icon, link, title }) => {
           return (
+            // <Box key={link} to={link}>
             <Box key={link}>
-              <>
-                {icon}
-                <h3> {title} </h3>
-              </>
+              {icon}
+              <Link to={"/all"}>TEST LINK</Link>
+              <h3> {title} </h3>
             </Box>
           );
         })}
       </Wrapper>
-
-      {/* <Card>
-        <CardTitle>Vinyasa Sun Icon</CardTitle>
-        <p>
-          A modern CSS UI library based on the glassmorphism design principles
-          that will help you quickly design and build beautiful websites and
-          applications.
-        </p>
-        <LinkButton href="https://ui.glass">Read more</LinkButton>
-      </Card>
-
-      <Card>
-        <CardTitle>Bikram Zap Icon</CardTitle>
-        <p>
-          A modern CSS UI library based on the glassmorphism design principles
-          that will help you quickly design and build beautiful websites and
-          applications.
-        </p>
-        <LinkButton href="https://ui.glass">Read more</LinkButton>
-      </Card>
-
-      <Card>
-        <CardTitle>Yin Moon Icon</CardTitle>
-        <p>
-          A modern CSS UI library based on the glassmorphism design principles
-          that will help you quickly design and build beautiful websites and
-          applications.
-        </p>
-        <LinkButton href="https://ui.glass">Read more</LinkButton>
-      </Card> */}
     </Container>
   );
 };
