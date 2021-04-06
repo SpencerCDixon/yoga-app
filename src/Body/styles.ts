@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import { Link as ReactLink } from "react-router-dom";
+import { Link as ReactLink } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -72,8 +72,8 @@ export const Wrapper = styled.div`
   }
 `;
 
-// export const Box = styled(ReactLink)`
-export const Box = styled.div`
+// export const Box = styled.div`
+export const Box = styled(ReactLink)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,6 +97,8 @@ export const Box = styled.div`
   transition: transform var(--transition-duration) var(--transition-easing);
 
   overflow: hidden;
+
+  /* position: absolute; */
 
   &::before {
     content: "";

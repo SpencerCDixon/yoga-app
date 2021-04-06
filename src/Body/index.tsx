@@ -1,6 +1,5 @@
 import { FC, SVGAttributes } from "react";
 // import "./App.css";
-import { Link } from "react-router-dom";
 import { Container, Box, Ruler, Wrapper } from "./styles";
 import { Activity, Sun, Moon, Zap } from "react-feather";
 
@@ -40,10 +39,10 @@ const Body: FC = () => {
       <Wrapper>
         {yogaTypes.map(({ icon, link, title }) => {
           return (
-            // <Box key={link} to={link}>
-            <Box key={link}>
+            <Box key={link} to={link}>
+              {/* <Box key={link}> */}
               {icon}
-              <Link to={"/all"}>TEST LINK</Link>
+              {/* <Link to={"/all"}>TEST LINK</Link> */}
               <h3> {title} </h3>
             </Box>
           );
