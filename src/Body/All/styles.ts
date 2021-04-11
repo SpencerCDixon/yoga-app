@@ -5,6 +5,10 @@ import SpaIcon from "@material-ui/icons/Spa";
 export const Background = styled.main`
   /* padding: -5px;
   margin: -5px; */
+
+  /* background-color: #fec89a;
+  background-image: -webkit-linear-gradient(150deg, #fec89a 35%, #f8edeb 35%);
+  min-height: 400px; */
 `;
 
 export const Card = styled.div`
