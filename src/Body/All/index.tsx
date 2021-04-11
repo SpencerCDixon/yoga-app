@@ -1,16 +1,20 @@
 import { FC, useCallback } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { yogaTypes } from "../index";
 import {
   Header,
   Background,
+
   // FloatingButton,
   ChevronLeft,
-  Title,
+  Spa,
+  Button,
+  ButtonContainer,
 } from "./styles";
 
 const AllPage: FC = () => {
   const history = useHistory();
+  const { pathname } = useLocation();
 
   const handleBack = useCallback(() => {
     history.goBack();
@@ -20,10 +24,16 @@ const AllPage: FC = () => {
     <Background>
       <Header>
         <ChevronLeft size={50} onClick={handleBack} />
-        <Title>Back All Page</Title>
+        {/* <Title>All Poses</Title> */}
+        {/* <Title>{yogaTypes[0].icon}</Title> */}
+        <Spa />
         <div>
           {yogaTypes.map((yoga) => {
-            return <button>{yoga.title}</button>;
+            return (
+              <ButtonContainer to={yoga.link}>
+                <Button $active={pathname === yoga.link}>{yoga.title}</Button>
+              </ButtonContainer>
+            );
           })}
         </div>
       </Header>

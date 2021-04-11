@@ -63,12 +63,13 @@ export const Wrapper = styled.div`
   gap: 5rem;
 
   svg {
-    --size: 8rem;
+    --size: 130px;
     --transition-duration: 500ms;
     --transition-easing: ease-out;
 
     width: var(--size);
     height: var(--size);
+    margin-bottom: 15px;
   }
 `;
 
@@ -131,3 +132,7 @@ export const Box = styled(ReactLink)`
     font-size: 1.5rem;
   }
 `;
+
+// export const Spa = styled(SpaIcon)`
+//   font-size: 150px;
+// `;
