@@ -10,6 +10,9 @@ const Routes: FC = () => {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/all" component={All} />
+        <Route exact path="/vinyasa" component={All} />
+        <Route exact path="/bikram" component={All} />
+        <Route exact path="/yin" component={All} />
       </Switch>
     </div>
   );

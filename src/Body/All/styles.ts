@@ -1,82 +1,63 @@
-import styled, { css } from "styled-components";
-import { ChevronLeft as ChevronLeftBase } from "react-feather";
-import { Link as LinkBase } from "react-router-dom";
+import styled from "styled-components";
+
 import SpaIcon from "@material-ui/icons/Spa";
 
 export const Background = styled.main`
-  background-color: #f8edeb;
-  background-image: -webkit-linear-gradient(150deg, #f8edeb 40%, #ffd7ba 35%);
-  background-size: cover;
-  /* min-height: 100vh; */
-  height: calc(100vh - 10px);
-  min-width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* padding: -5px;
+  margin: -5px; */
 `;
 
-export const Header = styled.header`
-  /* display: flex;
+export const Card = styled.div`
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  flex-direction: column;
+
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
   box-shadow: 0px calc(var(--size) / 6) calc(var(--size) / 3) rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 0;
 
   z-index: 1;
   padding: 1rem;
-  margin-bottom: 5rem;
+  margin: 1rem;
   border: 1px solid white;
-  backdrop-filter: blur(10px); */
+  backdrop-filter: blur(10px);
 
-  display: flex;
-  /* background-color: #d8e2dc; */
-  background-color: #c89afe;
-  justify-content: space-between;
-  align-items: center;
-  /* width: 90%; */
-  width: 100%;
-  position: absolute;
-  top: 0;
-  padding: 1rem;
+  color: white;
+  flex: 0 1 25%;
+  flex: 0 1 calc(25% - 1em);
 
   svg {
-    font-size: 50px !important;
+    color: white !important;
+    fill: white !important;
   }
 `;
 
-export const ChevronLeft = styled(ChevronLeftBase)`
-  color: white;
+export const BodyContainer = styled.div`
+  display: flex;
+  left: 0px;
+  padding: 0px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 `;
 
-export const Spa = styled(SpaIcon)`
-  color: white;
+export const BottomSpa = styled(SpaIcon)`
+  position: fixed;
+  font-size: 250px !important;
+  right: 5%;
+  bottom: 2%;
+  color: #f8edeb;
+  z-index: -999999;
 `;
 
-export const active = css`
-  /* border-bottom: 10px solid #d8e2dc; */
-  /* border-bottom: 5px solid white; */
-  background-color: white;
-  color: #c89afe;
+export const SVGContainer = styled.svg`
+  width: 50px;
+  height: 50px;
 `;
 
-export const ButtonContainer = styled(LinkBase)``;
-
-export const Button = styled.button<{ $active?: boolean }>`
-  padding: 0.5rem;
+export const Image = styled.image`
   color: white;
-  /* background-color: #f8edeb;
-  color: #fec89a;
-  border: 1px solid #f8edeb; */
-  background-color: #c89afe;
-  /* background-color: #d8e2dc; */
-  border: 1px solid white;
-  border-radius: 10px;
-  font-size: 1.5rem;
-  margin: 0 0.5rem;
-  cursor: pointer;
-  ${({ $active }) => $active && active};
+  fill: white;
+  height: 40px;
+  width: 40px;
 `;

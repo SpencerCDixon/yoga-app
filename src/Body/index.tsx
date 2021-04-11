@@ -41,9 +41,8 @@ const Body: FC = () => {
         {yogaTypes.map(({ icon, link, title }) => {
           return (
             <Box key={link} to={link}>
-              {/* <Box key={link}> */}
               {icon}
-              {/* <Link to={"/all"}>TEST LINK</Link> */}
+
               <h3> {title} </h3>
             </Box>
           );
