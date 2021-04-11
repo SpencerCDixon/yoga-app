@@ -61,3 +61,22 @@ export const Image = styled.image`
   height: 40px;
   width: 40px;
 `;
+
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Sanskrit = styled.h1`
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  text-align: center;
+`;
+
+export const PoseName = styled.p`
+  margin: 0;
+`;

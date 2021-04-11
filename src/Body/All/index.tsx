@@ -7,6 +7,9 @@ import {
   BottomSpa,
   Image,
   SVGContainer,
+  Sanskrit,
+  PoseName,
+  TextContainer,
 } from "./styles";
 import BodyHeader from "../BodyHeader";
 
@@ -27,10 +30,11 @@ const AllPage: FC = () => {
                 <Image href={pose.img_url} />
               </SVGContainer>
 
-              <div>
-                {index}:{pose.english_name}
-                {pose.sanskrit_name}
-              </div>
+              <TextContainer>
+                <Sanskrit>{pose.sanskrit_name}</Sanskrit>
+
+                <PoseName>{pose.english_name}</PoseName>
+              </TextContainer>
             </Card>
           );
         })}
