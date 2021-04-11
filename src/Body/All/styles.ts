@@ -1,63 +1,86 @@
 import styled from "styled-components";
-import { ChevronLeft as ChevronLeftBase } from "react-feather";
+
+import SpaIcon from "@material-ui/icons/Spa";
 
 export const Background = styled.main`
-  background-color: #f8edeb;
-  background-image: -webkit-linear-gradient(150deg, #f8edeb 40%, #ffd7ba 35%);
-  background-size: cover;
-  /* min-height: 100vh; */
-  height: calc(100vh - 10px);
-  min-width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* padding: -5px;
+  margin: -5px; */
+
+  /* background-color: #fec89a;
+  background-image: -webkit-linear-gradient(150deg, #fec89a 35%, #f8edeb 35%);
+  min-height: 400px; */
 `;
 
-export const Header = styled.header`
+export const Card = styled.div`
   display: flex;
-  /* justify-content: center; */
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  /* background-color: rgba(255, 255, 255, 0.4); */
+  flex-direction: column;
+
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
   box-shadow: 0px calc(var(--size) / 6) calc(var(--size) / 3) rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 0;
 
   z-index: 1;
-  padding: 1.5rem;
-  margin-bottom: 5rem;
+  padding: 1rem;
+  margin: 1rem;
   border: 1px solid white;
   backdrop-filter: blur(10px);
-`;
 
-export const FloatingButton = styled.button`
-  position: absolute;
-  top: 20px;
-  left: 15px;
-  height: 5rem;
-  width: 5rem;
-  /* background-color: rgba(255, 255, 255, 0.4); */
-  /* border-radius: 50%; */
-  border: none;
-  /* backdrop-filter: blur(10px); */
   color: white;
-  z-index: 9999;
+  flex: 0 1 25%;
+  flex: 0 1 calc(25% - 1em);
+
+  svg {
+    color: white !important;
+    fill: white !important;
+  }
 `;
 
-export const ChevronLeft = styled(ChevronLeftBase)`
-  /* height: 2rem;
-  width: auto;
+export const BodyContainer = styled.div`
+  display: flex;
+  left: 0px;
+  padding: 0px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+
+export const BottomSpa = styled(SpaIcon)`
+  position: fixed;
+  font-size: 250px !important;
+  right: 5%;
+  bottom: 2%;
+  color: #f8edeb;
+  z-index: -999999;
+`;
+
+export const SVGContainer = styled.svg`
+  width: 50px;
+  height: 50px;
+`;
+
+export const Image = styled.image`
+  color: white;
   fill: white;
-  border: none; */
-  color: white;
+  height: 40px;
+  width: 40px;
 `;
 
-export const Title = styled.h1`
-  color: white;
-  font-weight: 600;
-  font-size: 3rem;
-  text-shadow: black;
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Sanskrit = styled.h1`
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  text-align: center;
+`;
+
+export const PoseName = styled.p`
+  margin: 0;
 `;

@@ -1,7 +1,8 @@
 import { FC, SVGAttributes } from "react";
 // import "./App.css";
 import { Container, Box, Ruler, Wrapper } from "./styles";
-import { Activity, Sun, Moon, Zap } from "react-feather";
+import { Sun, Moon, Zap } from "react-feather";
+import Spa from "@material-ui/icons/Spa";
 
 type Yoga = {
   title: string;
@@ -12,7 +13,7 @@ type Yoga = {
 export const yogaTypes: Yoga[] = [
   {
     title: "all",
-    icon: <Activity />, // or feather?
+    icon: <Spa />, // or feather?
     link: "/all",
   },
   {
@@ -40,9 +41,8 @@ const Body: FC = () => {
         {yogaTypes.map(({ icon, link, title }) => {
           return (
             <Box key={link} to={link}>
-              {/* <Box key={link}> */}
               {icon}
-              {/* <Link to={"/all"}>TEST LINK</Link> */}
+
               <h3> {title} </h3>
             </Box>
           );

@@ -1,34 +1,44 @@
-import { FC, useCallback } from "react";
-import { useHistory } from "react-router-dom";
-import { yogaTypes } from "../index";
+import { FC } from "react";
+import { data } from "../../data";
 import {
-  Header,
   Background,
-  // FloatingButton,
-  ChevronLeft,
-  Title,
+  Card,
+  BodyContainer,
+  BottomSpa,
+  Image,
+  SVGContainer,
+  Sanskrit,
+  PoseName,
+  TextContainer,
 } from "./styles";
+import BodyHeader from "../BodyHeader";
 
 const AllPage: FC = () => {
-  const history = useHistory();
-
-  const handleBack = useCallback(() => {
-    history.goBack();
-  }, [history]);
+  console.log(data.length, data);
 
   return (
     <Background>
-      <Header>
-        <ChevronLeft size={50} onClick={handleBack} />
-        <Title>Back All Page</Title>
-        <div>
-          {yogaTypes.map((yoga) => {
-            return <button>{yoga.title}</button>;
-          })}
-        </div>
-      </Header>
+      <BodyHeader />
 
-      <div>All Page</div>
+      <BottomSpa />
+
+      <BodyContainer>
+        {data.map((pose, index) => {
+          return (
+            <Card key={pose.id}>
+              <SVGContainer>
+                <Image href={pose.img_url} />
+              </SVGContainer>
+
+              <TextContainer>
+                <Sanskrit>{pose.sanskrit_name}</Sanskrit>
+
+                <PoseName>{pose.english_name}</PoseName>
+              </TextContainer>
+            </Card>
+          );
+        })}
+      </BodyContainer>
     </Background>
   );
 };
