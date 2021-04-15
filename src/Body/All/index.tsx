@@ -26,6 +26,7 @@ const AllPage: FC = () => {
         {data.map((pose, index) => {
           return (
             <Card key={pose.id}>
+              {/* TODO: add favorites icon */}
               <SVGContainer>
                 <Image href={pose.img_url} />
               </SVGContainer>
@@ -34,6 +35,7 @@ const AllPage: FC = () => {
                 <Sanskrit>{pose.sanskrit_name}</Sanskrit>
 
                 <PoseName>{pose.english_name}</PoseName>
+                {/* TODO: add link */}
               </TextContainer>
             </Card>
           );

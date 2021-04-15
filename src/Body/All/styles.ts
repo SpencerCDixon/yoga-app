@@ -32,8 +32,8 @@ export const Card = styled.div`
   flex: 0 1 calc(25% - 1em);
 
   svg {
-    color: white !important;
-    fill: white !important;
+    /* color: white !important;
+    fill: white !important; */
   }
 `;
 
@@ -43,6 +43,8 @@ export const BodyContainer = styled.div`
   padding: 0px;
   justify-content: space-between;
   flex-wrap: wrap;
+  /* width: 75%; */
+  margin: 0.5rem 5rem;
 `;
 
 export const BottomSpa = styled(SpaIcon)`
@@ -55,15 +57,15 @@ export const BottomSpa = styled(SpaIcon)`
 `;
 
 export const SVGContainer = styled.svg`
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
 `;
 
 export const Image = styled.image`
   color: white;
   fill: white;
-  height: 40px;
-  width: 40px;
+  height: 70px;
+  width: 70px;
 `;
 
 export const TextContainer = styled.div`

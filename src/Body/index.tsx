@@ -1,8 +1,9 @@
 import { FC, SVGAttributes } from "react";
 // import "./App.css";
 import { Container, Box, Ruler, Wrapper } from "./styles";
-import { Sun, Moon, Zap } from "react-feather";
+import { Sun, Moon } from "react-feather";
 import Spa from "@material-ui/icons/Spa";
+import Fire from "@material-ui/icons/WhatshotOutlined";
 
 type Yoga = {
   title: string;
@@ -18,12 +19,15 @@ export const yogaTypes: Yoga[] = [
   },
   {
     title: "vinyasa",
+    // icon: <Sun />,
+    // icon: <LocalFlorist />,
     icon: <Sun />,
     link: "/vinyasa",
   },
   {
     title: "bikram",
-    icon: <Zap />,
+    // icon: <Zap />,
+    icon: <Fire />,
     link: "/bikram",
   },
   {

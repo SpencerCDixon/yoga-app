@@ -1,9 +1,13 @@
-import { useCallback } from "react";
+import {FC, useCallback, SVGProps } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import { yogaTypes } from "../index";
 import { Header, ChevronLeft, Spa, ButtonContainer, Button } from "./styles";
 
-const BodyHeader = () => {
+type Props = {
+  icon: string
+}
+
+const BodyHeader: FC = () => {
   const history = useHistory();
   const { pathname } = useLocation();
 

@@ -35,6 +35,7 @@ export const BottomCloud = styled(CloudBase)`
   /* fill: #cf8bf3; */
   z-index: -999999;
 `;
+
 export const MidCloud = styled(CloudBase)`
   position: absolute;
   font-size: 400px !important;
