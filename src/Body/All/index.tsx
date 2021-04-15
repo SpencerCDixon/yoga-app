@@ -18,7 +18,7 @@ const AllPage: FC = () => {
 
   return (
     <Background>
-      <BodyHeader />
+      <BodyHeader icon={"all"} />
 
       <BottomSpa />
 

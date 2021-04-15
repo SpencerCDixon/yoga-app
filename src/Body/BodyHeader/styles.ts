@@ -2,6 +2,8 @@ import styled, { css } from "styled-components";
 import { ChevronLeft as ChevronLeftBase } from "react-feather";
 import { Link as LinkBase } from "react-router-dom";
 import SpaIcon from "@material-ui/icons/Spa";
+import { Sun as SunBase, Moon as MoonBase } from "react-feather";
+import FireBase from "@material-ui/icons/WhatshotOutlined";
 
 export const Background = styled.main`
   /* padding: -5px;
@@ -20,6 +22,7 @@ export const Header = styled.header`
 
   svg {
     font-size: 50px !important;
+    size: 50px;
   }
 `;
 
@@ -28,6 +31,20 @@ export const ChevronLeft = styled(ChevronLeftBase)`
 `;
 
 export const Spa = styled(SpaIcon)`
+  color: white;
+`;
+
+export const Sun = styled(SunBase)`
+  color: white;
+  fill: white;
+`;
+
+export const Moon = styled(MoonBase)`
+  color: white;
+  fill: white;
+`;
+
+export const Fire = styled(FireBase)`
   color: white;
 `;
 

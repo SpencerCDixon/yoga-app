@@ -5,8 +5,10 @@ import { Sun, Moon } from "react-feather";
 import Spa from "@material-ui/icons/Spa";
 import Fire from "@material-ui/icons/WhatshotOutlined";
 
+export type YogaPractice = "all" | "vinyasa" | "bikram" | "yin";
+
 type Yoga = {
-  title: string;
+  title: YogaPractice;
   icon: SVGAttributes<SVGElement>;
   link: string;
 };

@@ -1,13 +1,33 @@
-import {FC, useCallback, SVGProps } from "react";
+import { FC, useCallback, SVGAttributes } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import { yogaTypes } from "../index";
-import { Header, ChevronLeft, Spa, ButtonContainer, Button } from "./styles";
+import {
+  Header,
+  ChevronLeft,
+  Spa,
+  ButtonContainer,
+  Button,
+  Sun,
+  Moon,
+  Fire,
+} from "./styles";
 
 type Props = {
-  icon: string
-}
+  icon: string;
+};
 
-const BodyHeader: FC = () => {
+type Icon = {
+  [key: string]: SVGAttributes<SVGAElement>;
+};
+
+const IconComponent: Icon = {
+  all: <Spa />,
+  vinyasa: <Sun size={50} />,
+  bikram: <Fire />,
+  yin: <Moon size={50} />,
+};
+
+const BodyHeader: FC<Props> = ({ icon }) => {
   const history = useHistory();
   const { pathname } = useLocation();
 
@@ -19,7 +39,8 @@ const BodyHeader: FC = () => {
     <Header>
       <ChevronLeft size={50} onClick={handleBack} />
 
-      <Spa />
+      {/* <Spa /> */}
+      {IconComponent[icon]}
       <div>
         {yogaTypes.map((yoga) => {
           return (
