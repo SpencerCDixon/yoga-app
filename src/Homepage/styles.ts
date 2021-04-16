@@ -41,7 +41,7 @@ export const MidCloud = styled(CloudBase)`
   color: #f8edeb;
   /* top: 3rem; */
   bottom: 30%;
-  right: -1.5rem;
+  right: 1rem;
   /* z-index: -99999; */
 
   /* fill: #cf8bf3; */
